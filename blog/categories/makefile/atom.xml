@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jun Wang's Blog]]></title>
-  <link href="http://wangeen.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: makefile | Jun Wang's Blog]]></title>
+  <link href="http://wangeen.github.io/blog/categories/makefile/atom.xml" rel="self"/>
   <link href="http://wangeen.github.io/"/>
   <updated>2013-09-11T20:40:30+08:00</updated>
   <id>http://wangeen.github.io/</id>
@@ -29,7 +29,7 @@
 
 <h2>打印当前makefile中所有的targets</h2>
 
-<p>make -qp | awk -F&#8217;:&lsquo; &rsquo;/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}&#8217;</p>
+<p>make -qp | awk -F':&lsquo; &rsquo;/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'</p>
 
 <h2>多线程编译</h2>
 
@@ -44,20 +44,6 @@
 第二,    gcc还有很多默认的库没有写进去，会以你最后设置的static还是dynamic为准，调用后面的库</p>
 
 <p>总之 makefile的语法设计不是很好，总会产生一些很难查找的错误。最好还是用cmake，qmake之类的高级tool代替他们。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rake(ruby make)]]></title>
-    <link href="http://wangeen.github.io/blog/2013/09/10/rake-ruby-make/"/>
-    <updated>2013-09-10T19:28:00+08:00</updated>
-    <id>http://wangeen.github.io/blog/2013/09/10/rake-ruby-make</id>
-    <content type="html"><![CDATA[<h2>rake(ruby make)</h2>
-
-<p>rake is something like make on linux.</p>
-
-<pre><code>--task: list all targets of current Rakefile 
-</code></pre>
 ]]></content>
   </entry>
   
